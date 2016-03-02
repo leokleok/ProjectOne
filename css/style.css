@@ -49,7 +49,7 @@ border-radius: 25px;
 
 }
 
-.timer {
+/*.timer {
   border-radius: 50%;
   background-color: #cf2e2f;
   border: none;
@@ -65,25 +65,27 @@ border-radius: 25px;
 }
 .timer:hover {
   background-color: grey;
-}
+}*/
 
 .menu {
   display: flex;
   justify-content: space-around;
   padding: 10px;
+  background-color: transparent;
 }
 
 .grid {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: transparent;
 }
 
 .picture
 {
   border-radius: 10px;
-  background-color: #cf2e2f;
-  border: 2px solid white;
+  background-color: #f2ede4;
+  border: 2px double #cf2e2f;
   display:block;
   width: 150px;
   height:150px;
