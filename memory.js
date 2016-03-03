@@ -33,9 +33,11 @@ var show = false;
   var numFlipped = 0;
   var score = 0;
   var player = false;
-  
+
+  var finalScore = 0;
+
   var intervalID;
-  var counter = 30;
+  var counter = 45;
 
 
 
@@ -72,7 +74,7 @@ var show = false;
 
     if(!player)
     {
-      counter = 30;
+      counter = 45;
       startTimer();
       player = true;
     }
@@ -104,7 +106,9 @@ var show = false;
             $(".gamestatus").html("You score " + score + " point");
                }
             else if (score == 8 ){
+              finalScore ++
             $(".gamestatus").html("True Blue Singaporean!");
+
               }
              else {
             $(".gamestatus").html("You score " + score + " points");
