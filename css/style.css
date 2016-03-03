@@ -4,15 +4,22 @@ color: #cf2e2f; /*red*/
 width: 30%;
 border: 5px double grey;
 text-align: center;
+align-items: center;
 font-size: 13px;
 margin: 0 auto;
 border-radius: 25px;
+/*http://culturelabx.com/wp-content/uploads/2014/10/general-assembly-logo.png*/
 }
+
+.ga {
+display: none;
+align-items: center;
+  }
 
 
 .main {
   margin: 20px;
-  border: 2px solid grey;
+  /*border: 2px solid grey;*/
   display:block;
   width: 1000px;
   height: 730px;
@@ -33,45 +40,69 @@ border-radius: 25px;
   font-size: 20px;
   margin: 4px 2px;
   cursor: pointer;
-
 }
+
 .newgame:hover {
-  background-color: grey;
+background-color: grey;
 }
 
 .gamestatus {
-  border: 1px dashed red;
+  /*border: 1px dashed red;*/
   display:block;
   width: 400px;
   height: 60px;
   text-align: center;
+  color: #cf2e2f;
   font-size: 40px;
-
+  font-family:
 }
 
-/*.timer {
+.timer {
   border-radius: 50%;
   background-color: #cf2e2f;
   border: none;
   color: white;
-  padding: 16px 60px;
+  padding: 18px 65px;
   text-align: center;
-
+  /*text-decoration: none;*/
   display: inline-block;
   font-size: 20px;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+
+.supermenu {
+display: flex;
 
 }
-.timer:hover {
-  background-color: grey;
-}*/
 
-.menu {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
+.menu1 {
+  /*display: flex;
+  justify-content: space-around;*/
+  /*padding: 10px;*/
   background-color: transparent;
+  position: relative;
+  left: 20px;
+  top: 10px;
+}
+
+.menu2 {
+  /*display: flex;
+  justify-content: space-around;*/
+  padding: 3px;
+  background-color: transparent;
+  position: relative;
+  left: 120px;
+  top: 10px;
+}
+
+.menu3 {
+  padding: 3px;
+  background-color: transparent;
+  position: relative;
+  left: 220px;
+  top: 10px;
 }
 
 .grid {
@@ -89,6 +120,21 @@ border-radius: 25px;
   display:block;
   width: 150px;
   height:150px;
+  -webkit-transition:all 0.3s ease-out;
+ -moz-transition:all 0.3s ease-out;
+ -ms-transition:all 0.3s ease-out;
+ -o-transition:all 0.3s ease-out;
+ transition:all 0.3s ease-out;
+}
+
+.picture:hover {
+  background-color: #cf2e2f;
+  -webkit-transform:scale(1.1);
+  -moz-transform:scale(1.1);
+  -ms-transform:scale(1.1);
+  -o-transform:scale(1.1);
+  transform:scale(1.1);
+
 }
 
 .picture img
@@ -101,6 +147,13 @@ border-radius: 25px;
   display: flex;
 }
 
+body {
+width: 100%;
+background: url("../pic/background.jpg") no-repeat center center fixed;
+background-size:cover;
+
+}
+
 @media only screen and (max-width: 920px) {
   /*style*/
   .main {
@@ -111,150 +164,4 @@ width: 100%;
 width: 100%;
   }
 
-
-
-/*#S1 {
-  border-radius: 10px;
-  background-color: #cf2e2f;
-  border: 2px solid grey;
-  display:block;
-  width: 145px;
-  height:145px;
 }
-
-#S2 {
-  border-radius: 10px;
-  background-color: #cf2e2f;
-  border: 2px solid grey;
-  display:block;
-  width: 145px;
-  height:145px;
-}
-
-#S3 {
-  border-radius: 10px;
-  background-color: #cf2e2f;
-  border: 2px solid grey;
-  display:block;
-  width: 145px;
-  height:145px;
-}
-
-#S4 {
-  border-radius: 10px;
-  background-color: #cf2e2f;
-  border: 2px solid grey;
-  display:block;
-  width: 145px;
-  height:145px;
-}
-
-#S5 {
-  border-radius: 10px;
-  background-color: #cf2e2f;
-  border: 2px solid grey;
-  display:block;
-  width: 145px;
-  height:145px;
-}
-
-#S6 {
-  border-radius: 10px;
-  background-color: #cf2e2f;
-  border: 2px solid grey;
-  display:block;
-  width: 145px;
-  height:145px;
-}
-
-
-#S7 {
-  border-radius: 10px;
-  background-color: #cf2e2f;
-  border: 2px solid grey;
-  display:block;
-  width: 145px;
-  height:145px;
-}
-
-#S8 {
-  border-radius: 10px;
-  background-color: #cf2e2f;
-  border: 2px solid grey;
-  display:block;
-  width: 145px;
-  height:145px;
-}
-
-#S9 {
-  border-radius: 10px;
-  background-color: #cf2e2f;
-  border: 2px solid grey;
-  display:block;
-  width: 145px;
-  height:145px;
-}
-
-
-#S10 {
-  border-radius: 10px;
-  background-color: #cf2e2f;
-  border: 2px solid grey;
-  display:block;
-  width: 145px;
-  height:145px;
-}
-
-#S11 {
-  border-radius: 10px;
-  background-color: #cf2e2f;
-  border: 2px solid grey;
-  display:block;
-  width: 145px;
-  height:145px;
-}
-
-#S12 {
-  border-radius: 10px;
-  background-color: #cf2e2f;
-  border: 2px solid grey;
-  display:block;
-  width: 145px;
-  height:145px;
-}
-
-#S13 {
-  border-radius: 10px;
-  background-color: #cf2e2f;
-  border: 2px solid grey;
-  display:block;
-  width: 145px;
-  height:145px;
-}
-
-#S14 {
-  border-radius: 10px;
-  background-color: #cf2e2f;
-  border: 2px solid grey;
-  display:block;
-  width: 145px;
-  height:145px;
-}
-
-#S15 {
-  border-radius: 10px;
-  background-color: #cf2e2f;
-  border: 2px solid grey;
-  display:block;
-  width: 145px;
-  height:145px;
-}
-
-#S16 {
-  border-radius: 10px;
-  background-color: #cf2e2f;
-  border: 2px solid grey;
-  display:block;
-  width: 145px;
-  height:145px;
-}*/
