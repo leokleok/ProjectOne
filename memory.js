@@ -34,10 +34,11 @@ var show = false;
   var score = 0;
   var player = false;
 
-  var finalScore = 0;
+  // var currentPlayer;
+  // console.log(currentPlayer)
 
   var intervalID;
-  var counter = 45;
+  var counter = 40;
 
 
 
@@ -72,9 +73,10 @@ var show = false;
     console.log(event.target.id);
     console.log(cardsCreated);
 
+
     if(!player)
     {
-      counter = 45;
+      counter = 40;
       startTimer();
       player = true;
     }
@@ -92,22 +94,30 @@ var show = false;
         $("#" + cardsCreated[i].id).off('click', listener);
 
         // player shouldn not be able to flip more than two tiles at once.
+
+
         if (numFlipped == 2)
         // when 2 cards are flipped, i want to compare if match or don't match
-        {
+          {
 
           if (cardsCreated[i].name == first)
           {
             // console.log("true");
-            score++;
+          //   if(currentPlayer == "x") {
+          //   currentPlayer = "x";
+          //     }
+          //   else (currentPlayer = "o")
+          //  console.log(currentPlayer);
+
+            score ++;
 
             function gamestatus () {
             if( score == 1) {
-            $(".gamestatus").html("You score " + score + " point");
+            $(".gamestatus").html("You score "+ score + " point");
                }
             else if (score == 8 ){
-              finalScore ++
-            $(".gamestatus").html("True Blue Singaporean!");
+
+            $(".gamestatus").html("Patriotic Singaporean!");
 
               }
              else {
@@ -115,16 +125,15 @@ var show = false;
              }
            }
                gamestatus();
-
-
           }
+
           else
           {
             var card = cardsCreated[i];
 
             function flipDelay()
             {
-              setTimeout(disappear, 1300);
+              setTimeout(disappear, 1200);
             }
 
             function disappear()
@@ -137,16 +146,22 @@ var show = false;
 
 
             $("#" + card.id).on('click', listener);
-
             $("#" + firstId).on('click', listener);
 
 
-
           }
-          //
+
+          // if(currentPlayer == "x") {
+          // currentPlayer = "o";
+          //   }
+          // else {currentPlayer = "x"}
+          // console.log(currentPlayer);
+
           numFlipped = 0;
 
         }
+
+
         else
         {
 
@@ -239,6 +254,5 @@ var show = false;
   {
     cardsCreated[i].id = "S" + (i + 1);
   }
-
 
 });
